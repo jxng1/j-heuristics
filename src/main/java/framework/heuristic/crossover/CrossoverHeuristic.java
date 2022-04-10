@@ -1,12 +1,11 @@
 package framework.heuristic.crossover;
 
-import framework.SATInstance;
-import framework.heuristic.Heuristic;
+import framework.base.SATInstance;
 
 import java.util.Random;
 
-public abstract class CrossoverHeuristic implements Heuristic {
-    protected Random rnd;
+public abstract class CrossoverHeuristic {
+    protected final Random rnd;
 
     public CrossoverHeuristic(Random rnd) {
         this.rnd = rnd;

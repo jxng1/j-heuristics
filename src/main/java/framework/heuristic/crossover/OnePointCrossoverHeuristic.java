@@ -1,6 +1,6 @@
 package framework.heuristic.crossover;
 
-import framework.SATInstance;
+import framework.base.SATInstance;
 
 import java.util.Random;
 

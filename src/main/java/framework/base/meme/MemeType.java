@@ -1,0 +1,5 @@
+package framework.base.meme;
+
+public enum MemeType {
+    INTENSITY_OF_MUTATION, CROSSOVER, INHERITANCE, LOCAL_SEARCH, MUTATION, REPLACEMENT, SELECTION
+}

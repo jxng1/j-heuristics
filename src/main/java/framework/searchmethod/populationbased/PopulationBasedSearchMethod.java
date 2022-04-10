@@ -1,17 +1,17 @@
 package framework.searchmethod.populationbased;
 
-import framework.SATInstance;
+import framework.base.SATInstance;
 
 import java.util.Random;
 
-public abstract class PopulationBased {
+public abstract class PopulationBasedSearchMethod {
     protected final int POPULATION_SIZE;
     protected final int BACKUP_SOLUTION_INDEX;
 
     protected SATInstance instance;
-    protected Random rnd = null;
+    protected final Random rnd;
 
-    public PopulationBased(SATInstance instance, Random rnd, int populationSize) {
+    public PopulationBasedSearchMethod(SATInstance instance, Random rnd, int populationSize) {
         this.instance = instance;
         this.rnd = rnd;
         this.POPULATION_SIZE = populationSize;
@@ -21,6 +21,10 @@ public abstract class PopulationBased {
     }
 
     public void run() {
+        loop();
+
 
     }
+
+    protected abstract void loop();
 }
