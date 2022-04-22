@@ -1,6 +1,5 @@
 # j-heuristics
 
-<<<<<<< HEAD
 A framework for solving MAX-SAT problems. Current problem support includes:
 
 - Knapsack Problem
@@ -12,7 +11,7 @@ that has detailed information on how to configure the framework._
 
 ### To see output...
 
-_A folder @ [here](src/main/resources/output) is generated with all text files
+_A folder [here](src/main/resources/output) is generated with all text files
 of the output from running the framework._
 
 Taking the example of the knapsack problem, an output file would look like this,
@@ -44,10 +43,7 @@ as of the time of this doc update._
 IDE.
 
 ```./gradlew run``` - from command line.
-=======
-_A heuristic framework for solving MAX-SAT problems._
 
 ### Roadmap:
 - _GUI using FX or Swing_
-- _Adding more support e.g. hyperheuristics and other operators._
->>>>>>> fa7cc45fbdb9dfda7165d67e8a771a76abee62ff
+- _Adding more framework support e.g. hyperheuristics and other operators._
