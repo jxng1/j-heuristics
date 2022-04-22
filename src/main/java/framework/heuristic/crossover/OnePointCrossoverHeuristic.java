@@ -10,10 +10,18 @@ public class OnePointCrossoverHeuristic extends CrossoverHeuristic {
     }
 
     @Override
-    public void applyHeuristic(SATInstance instance, int parentA, int parentB) {
+    public void applyHeuristic(SATInstance instance, int parentA, int parentB, int childA, int childB) {
         // get a random point to split
-        int randomPoint = rnd.nextInt(instance.getNumberOfVariables());
+        // not point choosing 0 or the last element, as nothing will get swapped.
+        int randomPoint = rnd.nextInt(1, instance.getNumberOfVariables());
+        instance.copySolution(parentA, childA);
+        instance.copySolution(parentB, childB);
 
-        instance.swapBitsBetweenSolutions(parentA, parentB, randomPoint);
+        instance.swapBitsBetweenSolutions(childA, childB, randomPoint);
+    }
+
+    @Override
+    public String toString() {
+        return "One Point Crossover";
     }
 }

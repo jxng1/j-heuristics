@@ -11,5 +11,5 @@ public abstract class CrossoverHeuristic {
         this.rnd = rnd;
     }
 
-    public abstract void applyHeuristic(SATInstance instance, int parentA, int parentB);
+    public abstract void applyHeuristic(SATInstance instance, int parentA, int parentB, int childA, int childB);
 }

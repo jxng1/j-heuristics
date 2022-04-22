@@ -18,6 +18,7 @@ public abstract class ReplacementHeuristic {
         for (int i = 0; i < populationSize; i++) {
             instance.copySolution(newPopulation[i], i);
         }
+        //System.out.println(instance);
     }
 
     protected abstract int[] generateNewPopulation(SATInstance instance, int populationSize);

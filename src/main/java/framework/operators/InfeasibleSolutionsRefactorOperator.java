@@ -1,5 +1,5 @@
 package framework.operators;
 
-public enum InfeasibleSolutionsOperator {
+public enum InfeasibleSolutionsRefactorOperator {
     PENALTY, REPAIR
 }

@@ -14,7 +14,7 @@ public class TournamentSelectionHeuristic extends SelectionHeuristic {
 
     @Override
     public int applyHeuristic(SATInstance instance, int tournamentSize) {
-        double best = Double.MAX_VALUE;
+        double best = Double.NEGATIVE_INFINITY;
         var rndListOfIndexes =
                 IntStream.range(0, instance.getPopulationSize() - 1)
                         .boxed()
@@ -22,14 +22,19 @@ public class TournamentSelectionHeuristic extends SelectionHeuristic {
         Collections.shuffle(rndListOfIndexes, rnd);
         int ret = -1;
 
-        for (int i = 0; i < tournamentSize; i++) {
+        for (int i = 0; i < tournamentSize - 1; i++) {
             double temp = instance.getObjectiveFunctionValue(rndListOfIndexes.get(i));
-            if (temp < best) {
+            if (temp > best) {
                 best = temp;
                 ret = i;
             }
         }
 
         return ret;
+    }
+
+    @Override
+    public String toString() {
+        return "Tournament Selection";
     }
 }

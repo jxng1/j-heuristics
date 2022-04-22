@@ -11,5 +11,5 @@ public abstract class InheritanceHeuristic {
         this.rnd = rnd;
     }
 
-    protected abstract void applyHeuristic(SATInstance instance, int parentAIndex, int parentBIndex, int childAIndex, int childBIndex);
+    public abstract void applyHeuristic(SATInstance instance, int parentAIndex, int parentBIndex, int childAIndex, int childBIndex);
 }

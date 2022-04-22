@@ -6,14 +6,13 @@ import java.util.Random;
 
 public abstract class LocalSearchHeuristic {
     protected final Random rnd;
+    protected final MoveAcceptance moveAcceptance;
 
-    public LocalSearchHeuristic(Random rnd) {
+    public LocalSearchHeuristic(Random rnd, MoveAcceptance moveAcceptance) {
         this.rnd = rnd;
+        this.moveAcceptance = moveAcceptance;
     }
 
-    protected abstract void applyHeuristic(SATInstance instance, int solutionIndex);
+    public abstract void applyHeuristic(SATInstance instance, int solutionIndex);
 }
 
-public enum MoveAcceptance {
-    IMPROVEMENT_ONLY, NON_WORSENING, WORSENING, SIMULATED_ANNEALING
-}

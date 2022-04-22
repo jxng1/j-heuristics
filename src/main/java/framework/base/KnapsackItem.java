@@ -1,21 +1,21 @@
 package framework.base;
 
 public class KnapsackItem {
-    private final int price;
-    private final int weight;
+    private final double price;
+    private final double weight;
     private final double priceToWeightRatio;
 
-    public KnapsackItem(int price, int weight) {
+    public KnapsackItem(double price, double weight) {
         this.price = price;
         this.weight = weight;
         this.priceToWeightRatio = (double) price / weight;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
