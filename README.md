@@ -1,6 +1,6 @@
 # j-heuristics
 
-A framework for solving MAX-SAT problems. Current problem support includes:
+A framework for solving well known NP-hard problems. Current problem support includes:
 
 - Knapsack Problem
 
@@ -46,4 +46,4 @@ IDE.
 
 ### Roadmap:
 - _GUI using FX or Swing_
-- _Adding more framework support e.g. hyperheuristics and other operators._
+- _Adding more framework support e.g. hyperheuritics, operators, problem support e.g. TSP._
